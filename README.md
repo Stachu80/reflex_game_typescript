@@ -1,4 +1,4 @@
 # reflex_game_typescript
 
 demo:
-reflex-game-typescript.netlify.app
+https://reflex-game-typescript.netlify.app
