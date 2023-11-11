@@ -1,5 +1,5 @@
 import { Statistics } from './statistics';
-import { ReflexElement } from './element';
+import { ReflexElement } from './relaxElement';
 
 export class ElementsContainer {
     private statistics: Statistics = new Statistics();
@@ -21,7 +21,7 @@ export class ElementsContainer {
         this.elementArray.forEach(element => (element.isLocked = locked));
     }
 
-    public destroy = () => {
+    public destroy = (): void => {
         removeEventListener('clickElement', this.clickOnTiles);
         removeEventListener('hideGreen', this.hideGreen);
         removeEventListener('showGreen', this.showGreen);
