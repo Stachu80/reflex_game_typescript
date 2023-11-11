@@ -8,7 +8,7 @@ const config = {
     entry: './src/main.ts',
     output: {
         filename:"bundle.js",
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
         open: true,
@@ -37,6 +37,14 @@ const config = {
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
     },
+    devServer: {
+         static: {
+             directory: path.join(__dirname, 'dist'),
+         },
+         compress: true,
+         port: 9000,
+    },
+    
 };
 
 module.exports = () => {
